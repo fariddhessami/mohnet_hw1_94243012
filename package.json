@@ -10,5 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "cowsay": "^1.4.0"
+  },
+  "devDependencies": {
+    "express": "^4.17.1"
   }
 }
