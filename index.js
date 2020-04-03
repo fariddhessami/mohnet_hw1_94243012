@@ -11,4 +11,8 @@ app.get('/', (req, res) => {
     res.send('hello world');
 });
 
+app.post('/', (req, res) => {
+    res.send('new post req recieved !!');
+});
+
 app.listen(PORT, () => console.log(`port is listening right now : ${PORT}`));
