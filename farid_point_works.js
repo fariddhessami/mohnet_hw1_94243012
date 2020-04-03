@@ -1,36 +1,21 @@
-var inside = require('point-in-polygon');
-var polygon = [
-    [1, 1],
-    [1, 2],
-    [2, 2],
-    [2, 1]
-];
+const turf = require('@turf/turf');
 
-console.dir([
-    inside([1.5, 1.5], polygon),
-    inside([4.9, 1.2], polygon),
-    inside([1.8, 1.1], polygon)
+var pt = turf.point([-77, 44]);
+var poly = turf.polygon([
+    [
+        [-81, 41],
+        [-81, 47],
+        [-72, 47],
+        [-72, 41],
+        [-81, 41]
+    ]
 ]);
 
-// module.exports = is_point_inside_polygon;
+turf.booleanPointInPolygon(pt, poly);
+//= true
 
-// //          example : (from the npm page)
-// //
-// var polygon = [
-//     [1, 1],
-//     [1, 2],
-//     [2, 2],
-//     [2, 1]
-// ];
+console.log(turf.booleanPointInPolygon(pt, poly));
 
-console.log([
-    is_point_inside_polygon([1.5, 1.5], polygon),
-    is_point_inside_polygon([4.9, 1.2], polygon),
-    is_point_inside_polygon([1.8, 1.1], polygon)
-]);
-
-function is_point_inside_polygon(lat, long, polygon) {
-    var answer = false;
-    answer = inside([lat, long], polygon);
-    return anwer;
+function find_answer_polygons_names_for_point(lat, long, names_coords_array) {
+    var suspect_name;
 }

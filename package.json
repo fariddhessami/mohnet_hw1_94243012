@@ -1,18 +1,20 @@
 {
-  "name": "faridy_net_hw1",
-  "version": "1.0.0",
-  "description": "hw1 tamrin",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "cowsay": "^1.4.0",
-    "point-in-polygon": "^1.0.1"
-  },
-  "devDependencies": {
-    "express": "^4.17.1"
-  }
+    "name": "faridy_net_hw1",
+    "version": "1.0.0",
+    "description": "hw1 tamrin",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@turf/turf": "^5.1.6",
+        "cowsay": "^1.4.0",
+        "point-in-polygon": "^1.0.1",
+        "turf": "^3.0.14"
+    },
+    "devDependencies": {
+        "express": "^4.17.1"
+    }
 }
