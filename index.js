@@ -19,4 +19,17 @@ app.post('/', (req, res) => {
     res.send('new post req recieved !!');
 });
 
+app.get('/gis/testpoint/', (req, res) => {
+    res.send('alo');
+});
+
+app.get('/gis/testpoint/:num', (req, res) => {
+    res.send(req.params.num);
+});
+
+app.get('/gis/testpoint/:lat/:long', function(req, res) {
+    res.send('lat nad long' + req.params.lat + ' ' + req.params.long);
+    res.send(req.params);
+});
+
 app.listen(PORT, () => console.log(`port is listening right now : ${PORT}`));
