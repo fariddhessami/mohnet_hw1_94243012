@@ -12,6 +12,9 @@ var data_array = reader();
 
 var pointWorks = module.require('./farid_point_works');
 
+app.use(express.json());
+//for reading json in input body
+
 app.get('/', (req, res) => {
     res.send('hello world');
 });
@@ -38,4 +41,19 @@ app.get('/gis/testpoint/:lat/:long', function(req, res) {
     res.send(answerObject);
 });
 
+app.put('/gis/addpolygon', function(req, res) {
+    var jSonSTring = JSON.stringify(req.body);
+    var respObj = JSON.parse(jSonSTring);
+
+    var coords = respObj.geometry.coordinates;
+    var name = respObj.properties.name;
+
+    add_name_polygons(name, coords, data_array);
+    res.send(respObj);
+});
+
 app.listen(PORT, () => console.log(`port is listening right now : ${PORT}`));
+
+function add_name_polygons(name, coords, data_array) {
+    data_array.push({ name, coords });
+}
