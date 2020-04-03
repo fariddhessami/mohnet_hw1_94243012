@@ -6,12 +6,19 @@ function find_answer_polygons_names_for_point(lat, long, names_coords_array) {
     var answer_names = [];
 
     names_coords_array.forEach(element => {
-        console.log(`element.coords is : ${element.coords}`);
+        // console.log(`element.coords is : ${element.coords}`);
+
+        suspect_name = element.name;
 
         var turPoly = turf.polygon(element.coords);
 
-        if (turf.booleanPointInPolygon([lat, long], turPoly)) console.log('jesus');
+        if (turf.booleanPointInPolygon([lat, long], turPoly)) {
+            console.log('we found one');
+            answer_names.push(suspect_name);
+        }
     });
+
+    console.log(`answers found are : ${answer_names}`);
 }
 
 var pt = turf.point([79.453125, 63.54855223203644]);
