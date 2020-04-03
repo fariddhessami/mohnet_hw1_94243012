@@ -24,22 +24,18 @@ app.get('/gis/print_data/', (req, res) => {
     res.send(data_array);
 });
 
-app.get('/gis/testpoint/', (req, res) => {
-    res.send('alo');
-});
-
-app.get('/gis/testpoint/:num', (req, res) => {
-    res.send(req.params.num);
-});
-
 app.get('/gis/testpoint/:lat/:long', function(req, res) {
     let lat = req.params.lat;
     let long = req.params.long;
 
-    res.send('lat nad long' + lat + ' ' + long);
     console.log(`server recieved a point lat : ${lat} long : ${long}`);
 
-    pointWorks(lat, long, data_array);
+    var polygonsArray = [];
+    polygonsArray = pointWorks(lat, long, data_array);
+
+    var answerObject = { polygons: polygonsArray };
+
+    res.send(answerObject);
 });
 
 app.listen(PORT, () => console.log(`port is listening right now : ${PORT}`));

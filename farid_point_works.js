@@ -19,6 +19,8 @@ function find_answer_polygons_names_for_point(lat, long, names_coords_array) {
     });
 
     console.log(`answers found are : ${answer_names}`);
+
+    return answer_names;
 }
 
 var pt = turf.point([79.453125, 63.54855223203644]);
