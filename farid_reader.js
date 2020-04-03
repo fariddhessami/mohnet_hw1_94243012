@@ -1,21 +1,31 @@
-let data_from_file = require('./data.json');
-//data_from_file is an object
+let an_array = readData();
+console.log(an_array);
+//examplary main code
 
-let features_1st_layer = data_from_file.features;
+module.exports = readData;
 
-console.log(features_1st_layer);
+function readData() {
+    let data_from_file = require('./data.json');
+    //data_from_file is an object
 
-var array_of_names_coords = [];
+    let features_1st_layer = data_from_file.features;
 
-features_1st_layer.forEach(feature => {
-    console.log('name : ' + feature.properties.name);
-    console.log('coordinates : ' + feature.geometry.coordinates);
+    console.log(features_1st_layer);
 
-    let name = feature.properties.name;
-    let coords = feature.geometry.coordinates;
+    var array_of_names_coords = [];
 
-    array_of_names_coords.push(name, coords);
-});
+    features_1st_layer.forEach(feature => {
+        console.log('name : ' + feature.properties.name);
+        console.log('coordinates : ' + feature.geometry.coordinates);
 
-console.log('real thing : ');
-console.log(array_of_names_coords);
+        let name = feature.properties.name;
+        let coords = feature.geometry.coordinates;
+
+        array_of_names_coords.push({ name, coords });
+    });
+
+    console.log('real thing : ');
+    console.log(array_of_names_coords);
+
+    return array_of_names_coords;
+}
