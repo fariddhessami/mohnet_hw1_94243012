@@ -9,15 +9,15 @@ turf package is used to determine if a point is inside of data polygons or not
 
 
 ## endpoint templates :
-# print_data
+### print_data
 ```js
 '/gis/print_data/'
 ```
-# reset_data
+### reset_data
 ```js
 '/gis/reset_data/'
 ```
-# testpoint
+### testpoint
 ```js
 '/gis/testpoint/:lat/:long'
 ```
