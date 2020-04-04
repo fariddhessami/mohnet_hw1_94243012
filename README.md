@@ -8,8 +8,9 @@ assumption : for the inputs it is manditory for each feature to have a name fiel
 turf package is used to determine if a point is inside of data polygons or not
 
 GET examples :
-
+```JSON
 "localhost:3000/gis/testpoint/79.453125/63.54855223203644"
+```
 
 
 template readme :
@@ -36,10 +37,6 @@ foobar.pluralize('goose') # returns 'geese'
 foobar.singularize('phenomena') # returns 'phenomenon'
 ```
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-Please make sure to update tests as appropriate.
-
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+## Heraku Link
+[Heraku App](https://hw1-94243012.herokuapp.com/)
