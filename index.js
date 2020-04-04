@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 //question : what does this line do ?
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 var say_sth_hi = module.require('./test_module_1');
 say_sth_hi();
