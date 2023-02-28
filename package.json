@@ -10,7 +10,7 @@
     "license": "ISC",
     "dependencies": {
         "@turf/turf": "^5.1.6",
-        "cowsay": "^1.4.0",
+        "cowsay": "^1.5.0",
         "point-in-polygon": "^1.0.1",
         "turf": "^3.0.14",
         "express": "^4.17.1"
